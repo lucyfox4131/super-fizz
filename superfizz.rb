@@ -1,24 +1,21 @@
+#supefizz program
+# start with an empty string
+# ADD strings to our starter string if conditional values are true
 
-array = (0..1000)
-
-array.each do |number|
+(0..1000).each do |number|
+  to_return = ""
   if number == 0
-    puts 0
-  elsif number % 3 == 0 && number % 5 == 0 && number % 7 == 0
-    puts "SuperFizzBuzz"
-  elsif number % 3 == 0 && number % 7 == 0
-    puts "SuperFizz"
-  elsif number % 5 == 0 && number % 7 == 0
-    puts "SuperBuzz"
-  elsif number % 3 == 0 && number % 5 == 0
-    puts "FizzBuzz"
-  elsif number % 3 == 0
-    puts "Fizz"
-  elsif number % 5 == 0
-    puts "Buzz"
-  elsif number % 7 == 0
-    puts "Super"
+    puts number # put 0 if on zero
   else
-    puts number
+    if number % 7 == 0
+      to_return = to_return + "Super"
+    end
+    if number % 5 == 0
+      to_return = to_return + "Buzz"
+    end
+    if number % 3 == 0
+      to_return = to_return + "Fizz"
+    end
+    puts to_return == "" ? number : to_return
   end
 end
