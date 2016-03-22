@@ -21,23 +21,6 @@ array.each do |number|
     if number % 3 == 0
       to_return = to_return + "Fizz"
     end
-
-    if to_return == ""
-      puts number
-    else
-      puts to_return
-    end
+    puts to_return == "" ? number : to_return
   end
 end
-
-
-
-
-# elsif number % 3 == 0 && number % 5 == 0 && number % 7 == 0
-#   puts "SuperFizzBuzz"
-# elsif number % 3 == 0 && number % 7 == 0
-#   puts "SuperFizz"
-# elsif number % 5 == 0 && number % 7 == 0
-#   puts "SuperBuzz"
-# elsif number % 3 == 0 && number % 5 == 0
-#   puts "FizzBuzz"
