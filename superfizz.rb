@@ -1,3 +1,4 @@
+#supefizz program
 
 array = (0..1000)
 
